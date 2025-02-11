@@ -52,12 +52,14 @@
         <div class="difer">
           <div class="latest">
             <p class="lat">Latest Article</p>
+            {% for post in post_list %}
             <div class="latest-card">
               <img src="" alt="" />
-              <h2>Title</h2>
-              <p>created_at</p>
+              <h2>{{post.title}}</h2>
+              <p>{{post.created_at}}</p>
               <p>description</p>
             </div>
+            {% endfor %}
           </div>
           <div class="popular">
             <p class="pop">Popular Article</p>
