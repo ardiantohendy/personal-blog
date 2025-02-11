@@ -12,6 +12,7 @@
 }
 
 .main .head {
+  position: absolute;
   width: 100%;
   display: flex;
   align-items: center;
@@ -89,8 +90,8 @@
 
 .main .home {
   width: 100%;
-  height: 80%;
-  padding: 5rem;
+  height: 100vh;
+  padding: 12rem 5rem 5rem 5rem;
   display: flex;
   color: whitesmoke;
 }
@@ -114,6 +115,7 @@
 
 .main .home .card {
   width: 50%;
+  height: 85%;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
@@ -159,4 +161,38 @@
 .main .home .img ul li a:hover {
   color: rgb(35, 35, 35);
   background-color: rgb(243, 186, 47);
+}
+
+.main .blog {
+  width: 100%;
+  min-height: 100vh;
+  max-height: fit-content;
+  background-color: rgb(35, 35, 35);
+  padding-top: 2rem;
+  color: whitesmoke;
+}
+
+.main .blog h1 {
+  font-size: 3rem;
+  text-align: center;
+  word-spacing: 2rem;
+}
+
+.main .blog .difer {
+  display: flex;
+  padding: 3rem 5rem;
+}
+
+.main .blog .difer .latest {
+  width: 50%;
+}
+
+.main .blog .difer .latest p.lat,
+.main .blog .difer .popular p.pop {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.main .blog .difer .popular {
+  width: 50%;
 }
