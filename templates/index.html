@@ -48,27 +48,11 @@
         </div>
       </div>
       <div class="blog">
-        <h1>Posts</h1>
+        <p class="lat">Latest Article</p>
         <div class="difer">
           <div class="latest">
-            <p class="lat">Latest Article</p>
             {% for post in post_list %}
             <div class="latest-card">
-              <img src="{{post.image.url}}" alt="" />
-              <div class="desc">
-                <div class="tit">
-                  <h2>{{post.title}}</h2>
-                  <p class="date">{{post.created_at}}</p>
-                </div>
-                <p class="cont">{{post.content}}</p>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-          <div class="popular">
-            <p class="pop">Popular Article</p>
-            {% for post in post_list %}
-            <div class="popular-card">
               <img src="{{post.image.url}}" alt="" />
               <div class="desc">
                 <div class="tit">

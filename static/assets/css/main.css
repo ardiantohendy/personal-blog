@@ -180,41 +180,31 @@
 
 .main .blog .difer {
   display: flex;
-  padding: 3rem 7rem;
+  padding: 2rem 7rem;
 }
 
-.main .blog .difer .latest,
-.main .blog .difer .popular {
-  width: 50%;
+.main .blog .difer .latest {
+  width: 80%;
+  margin: auto;
 }
 
 .main .blog .difer .latest-card {
   margin: 1rem 0;
   padding-right: 1rem;
   width: 100%;
-  height: 8rem;
+  height: 10rem;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
-.main .blog .difer .popular-card {
-  margin: 1rem 0;
-  padding-left: 1rem;
-  width: 100%;
-  height: 8rem;
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
+.main .blog .difer .latest img {
+  width: 22%;
+  height: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.main .blog .difer .latest img,
-.main .blog .difer .popular img {
-  width: 25%;
-  height: 100%;
-}
-
-.main .blog .difer .latest .desc,
-.main .blog .difer .popular .desc {
+.main .blog .difer .latest .desc {
   padding: 0 1rem;
 }
 
@@ -224,25 +214,15 @@
   justify-content: space-between;
 }
 
-.main .blog .difer .popular .desc .tit {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row-reverse;
-}
-
-.main .blog .difer .latest .desc h2,
-.main .blog .difer .popular .desc h2 {
+.main .blog .difer .latest .desc h2 {
   text-transform: capitalize;
 }
 
-.main .blog .difer .latest .desc p.date,
-.main .blog .difer .popular .desc p.date {
+.main .blog .difer .latest .desc p.date {
   font-size: 0.7em;
 }
 
-.main .blog .difer .latest .desc p.cont,
-.main .blog .difer .popular .desc p.cont {
+.main .blog .difer .latest .desc p.cont {
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
@@ -252,10 +232,8 @@
   font-size: 0.9em;
 }
 
-.main .blog .difer .latest p.lat,
-.main .blog .difer .popular p.pop {
+.main .blog p.lat {
   text-align: center;
-  font-size: 1.5em;
-  margin: 0 0 2rem 0;
+  font-size: 2em;
   font-weight: 600;
 }
