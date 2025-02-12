@@ -188,20 +188,30 @@
   margin: auto;
 }
 
+.main .blog .difer .latest a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
 .main .blog .difer .latest-card {
   margin: 1rem 0;
-  padding-right: 1rem;
+  padding: 0.2rem;
   width: 100%;
-  height: 10rem;
+  height: 8.5rem;
   display: flex;
   align-items: center;
   overflow: hidden;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.main .blog .difer .latest-card:hover {
+  opacity: calc(70%);
 }
 
 .main .blog .difer .latest img {
-  width: 22%;
-  height: auto;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 20%;
+  height: 100%;
 }
 
 .main .blog .difer .latest .desc {
@@ -210,8 +220,7 @@
 
 .main .blog .difer .latest .desc .tit {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .main .blog .difer .latest .desc h2 {
@@ -220,11 +229,12 @@
 
 .main .blog .difer .latest .desc p.date {
   font-size: 0.7em;
+  margin: 0.5rem 0;
 }
 
 .main .blog .difer .latest .desc p.cont {
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-align: justify;
