@@ -122,7 +122,7 @@
 .main .home .img {
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/article_image/bitcoin1.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/article/bitcoin1.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 4px;
@@ -180,30 +180,82 @@
 
 .main .blog .difer {
   display: flex;
-  padding: 3rem 5rem;
+  padding: 3rem 7rem;
 }
 
-.main .blog .difer .latest {
+.main .blog .difer .latest,
+.main .blog .difer .popular {
   width: 50%;
 }
 
 .main .blog .difer .latest-card {
+  margin: 1rem 0;
+  padding-right: 1rem;
   width: 100%;
   height: 8rem;
+  display: flex;
+  align-items: center;
 }
 
-.main .blog .difer .latest img {
+.main .blog .difer .popular-card {
+  margin: 1rem 0;
+  padding-left: 1rem;
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.main .blog .difer .latest img,
+.main .blog .difer .popular img {
   width: 25%;
   height: 100%;
-  background-color: antiquewhite;
+}
+
+.main .blog .difer .latest .desc,
+.main .blog .difer .popular .desc {
+  padding: 0 1rem;
+}
+
+.main .blog .difer .latest .desc .tit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main .blog .difer .popular .desc .tit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.main .blog .difer .latest .desc h2,
+.main .blog .difer .popular .desc h2 {
+  text-transform: capitalize;
+}
+
+.main .blog .difer .latest .desc p.date,
+.main .blog .difer .popular .desc p.date {
+  font-size: 0.7em;
+}
+
+.main .blog .difer .latest .desc p.cont,
+.main .blog .difer .popular .desc p.cont {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: justify;
+  line-height: 1.6rem;
+  font-size: 0.9em;
 }
 
 .main .blog .difer .latest p.lat,
 .main .blog .difer .popular p.pop {
   text-align: center;
   font-size: 1.5em;
-}
-
-.main .blog .difer .popular {
-  width: 50%;
+  margin: 0 0 2rem 0;
+  font-weight: 600;
 }

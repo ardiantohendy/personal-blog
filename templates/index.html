@@ -55,20 +55,30 @@
             {% for post in post_list %}
             <div class="latest-card">
               <img src="{{post.image.url}}" alt="" />
-              <h2>{{post.title}}</h2>
-              <p>{{post.created_at}}</p>
-              <p>description</p>
+              <div class="desc">
+                <div class="tit">
+                  <h2>{{post.title}}</h2>
+                  <p class="date">{{post.created_at}}</p>
+                </div>
+                <p class="cont">{{post.content}}</p>
+              </div>
             </div>
             {% endfor %}
           </div>
           <div class="popular">
             <p class="pop">Popular Article</p>
+            {% for post in post_list %}
             <div class="popular-card">
-              <img src="" alt="" />
-              <h2>Title</h2>
-              <p>created_at</p>
-              <p>description</p>
+              <img src="{{post.image.url}}" alt="" />
+              <div class="desc">
+                <div class="tit">
+                  <h2>{{post.title}}</h2>
+                  <p class="date">{{post.created_at}}</p>
+                </div>
+                <p class="cont">{{post.content}}</p>
+              </div>
             </div>
+            {% endfor %}
           </div>
         </div>
       </div>
