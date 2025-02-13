@@ -22,8 +22,12 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
             <div class="spec">
-              <li><a class="log" href="#">LogIn</a></li>
+              {% if user.is_authenticated %}
+              <li><a class="sign" href="logout">Log Out</a></li>
+              {% else %}
+              <li><a class="log" href="login">LogIn</a></li>
               <li><a class="sign" href="register">SignUp</a></li>
+              {% endif %}
             </div>
           </ul>
         </div>

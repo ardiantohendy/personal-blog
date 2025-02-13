@@ -47,7 +47,7 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            return redirect('')
+            return redirect('/')
     
         else:
             messages.info(request, "Credential invalid!")
@@ -58,9 +58,9 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect('')
+    return redirect('/')
 
 def delete(request):
     user = request.user
     user.delete()
-    return redirect('')
+    return redirect('/')
