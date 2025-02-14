@@ -8,6 +8,7 @@ urlpatterns = [
     path('register', views.register, name = 'register'),
     path('login', views.login, name = 'login'),
     path('logout', views.logout, name = 'logout'),
+    path('article/<int:id>/', views.article_page, name= 'article_page')
 ]
 
 if settings.DEBUG:

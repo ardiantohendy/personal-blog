@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'assets/css/article_page.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="head">
+        <div class="logo">
+          <p>MoneyFarm</p>
+        </div>
+        <div class="list">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <div class="spec">
+              {% if user.is_authenticated %}
+              <li><a class="sign" href="logout">Log Out</a></li>
+              {% else %}
+              <li><a class="log" href="login">LogIn</a></li>
+              <li><a class="sign" href="register">SignUp</a></li>
+              {% endif %}
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="article_detail">
+          <p>{{article.title}}</p>
+          <p>{{article.writer}}</p>
+          <p>{{article.created_at}}</p>
+          <!-- <img src="{{ article.image.url }}" alt="" /> -->
+          <p>{{article.content|linebreaks}}</p>
+        </div>
+        <div class="article_list"></div>
+      </div>
+    </div>
+  </body>
+</html>

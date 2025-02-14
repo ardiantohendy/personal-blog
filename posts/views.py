@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
@@ -64,3 +64,7 @@ def delete(request):
     user = request.user
     user.delete()
     return redirect('/')
+
+def article_page(request, id):
+    article = get_object_or_404(Post, id=id)
+    return render(request, 'article_page.html', {'article' : article})

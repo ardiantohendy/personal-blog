@@ -56,7 +56,7 @@
         <div class="difer">
           <div class="latest">
             {% for post in post_list %}
-            <a href="#">
+            <a href="{% url 'article_page' post.id %}">
               <div class="latest-card">
                 <img src="{{post.image.url}}" alt="" />
                 <div class="desc">
