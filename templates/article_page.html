@@ -37,7 +37,7 @@
           <p>{{article.writer}}</p>
           <p>{{article.created_at}}</p>
           <!-- <img src="{{ article.image.url }}" alt="" /> -->
-          <p>{{article.content|linebreaks}}</p>
+          <div class="text_content">{{article.content|safe}}</div>
         </div>
         <div class="article_list"></div>
       </div>
